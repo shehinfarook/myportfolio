@@ -274,7 +274,7 @@
     const submitBtn = document.getElementById("submitBtn");
     const originalText = submitBtn.innerHTML;
     
-    // Show loading state
+    
     submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
     submitBtn.disabled = true;
     
@@ -284,16 +284,16 @@
     const mobile = document.getElementById("mobile").value;
     const message = document.getElementById("message").value;
     
-    // Create email content
+    
     const subject = `Contact from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nPlace: ${place}\nMobile: ${mobile}\n\nMessage:\n${message}`;
     
     const mailtoLink = `mailto:shehinfarook@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Open default email client
+    
     window.location.href = mailtoLink;
     
-    // Reset form and button
+    
     setTimeout(() => {
       this.reset();
       submitBtn.innerHTML = originalText;
@@ -302,7 +302,6 @@
     }, 1000);
   });
   
-  // Add smooth scrolling animation on page load
   window.addEventListener('load', function() {
     const elements = document.querySelectorAll('.fade-in, .fade-in-delay');
     elements.forEach((el, index) => {
