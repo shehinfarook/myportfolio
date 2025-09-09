@@ -67,7 +67,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 pt-5 text-center">
-                <img src="imgme.jpg" class="profile-img" alt="Shehin Farook" style="width: 300px; height: 300px; object-fit: cover;">
+                <img src="picme.jpg" class="profile-img" alt="Shehin Farook" style="width: 300px; height: 300px; object-fit: cover;">
             </div>
             
             <div class="col-md-6 pt-3 fade-in">
@@ -274,7 +274,7 @@
     const submitBtn = document.getElementById("submitBtn");
     const originalText = submitBtn.innerHTML;
     
-    
+
     submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
     submitBtn.disabled = true;
     
@@ -284,16 +284,16 @@
     const mobile = document.getElementById("mobile").value;
     const message = document.getElementById("message").value;
     
-    
+  
     const subject = `Contact from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nPlace: ${place}\nMobile: ${mobile}\n\nMessage:\n${message}`;
     
     const mailtoLink = `mailto:shehinfarook@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    
+  
     window.location.href = mailtoLink;
     
-    
+ 
     setTimeout(() => {
       this.reset();
       submitBtn.innerHTML = originalText;
@@ -302,6 +302,7 @@
     }, 1000);
   });
   
+
   window.addEventListener('load', function() {
     const elements = document.querySelectorAll('.fade-in, .fade-in-delay');
     elements.forEach((el, index) => {
