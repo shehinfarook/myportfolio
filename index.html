@@ -18,8 +18,8 @@
         <div class="col-md-6 col-12 ml-auto my-auto">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="bi bi-list text-white" style="font-size: 1.8rem;"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
@@ -36,7 +36,7 @@
                       <a class="nav-link text-white" href="#experience-section">Experience</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-white" href="#service-section">Service</a>
+                      <a class="nav-link text-white" href="#service-section">Profession</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -50,7 +50,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        My CV/Resume
+                        CV/Resume
                       </a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="My CV.pdf">View my CV</a>
@@ -274,7 +274,7 @@
     const submitBtn = document.getElementById("submitBtn");
     const originalText = submitBtn.innerHTML;
     
-
+    // Show loading state
     submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
     submitBtn.disabled = true;
     
@@ -284,16 +284,16 @@
     const mobile = document.getElementById("mobile").value;
     const message = document.getElementById("message").value;
     
-  
+    // Create email content
     const subject = `Contact from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nPlace: ${place}\nMobile: ${mobile}\n\nMessage:\n${message}`;
     
     const mailtoLink = `mailto:shehinfarook@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-  
+    // Open default email client
     window.location.href = mailtoLink;
     
- 
+    // Reset form and button
     setTimeout(() => {
       this.reset();
       submitBtn.innerHTML = originalText;
@@ -302,7 +302,7 @@
     }, 1000);
   });
   
-
+  // Add smooth scrolling animation on page load
   window.addEventListener('load', function() {
     const elements = document.querySelectorAll('.fade-in, .fade-in-delay');
     elements.forEach((el, index) => {
