@@ -12,6 +12,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
+.newone{
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: stretch; 
+  gap: 1rem; 
+}
+
+.card {
+  flex: 1 0 250px; /* Allows cards to grow and shrink, with a base width of 250px */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in the total width/height */
+
+
+}
 
 body::before {
     content: '';
@@ -25,6 +40,7 @@ body::before {
     z-index: -1;
 }
 
+
 /* Glass Card Effect */
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
@@ -35,10 +51,11 @@ body::before {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     animation: fadeInUp 0.8s ease-out;
+    opacity: 70%;
 }
 
 .glass-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
     background: rgba(255, 255, 255, 0.15);
 }
